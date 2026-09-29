@@ -370,7 +370,7 @@
 <header class="memo-header">
   <div class="hs-logo"><span></span> HubSpot · Internal memo</div>
   <h1>Executive Escalations Coordinator<br>Design review and proposed next steps</h1>
-  <p class="tagline">A summary of what I investigated, what I found, and what I am proposing — for your review before anything moves forward.</p>
+  <p class="tagline">A summary of what I investigated, what I found, and what I am proposing .</p>
   <div class="meta-block">
     <div class="meta-item"><label>To</label><p>Program Manager</p></div>
     <div class="meta-item"><label>Date</label><p>September 28, 2026</p></div>
@@ -380,7 +380,7 @@
 
 <!-- STATUS BANNER -->
 <div class="status-banner">
-  ⚠️ &nbsp; Nothing in this memo has been deployed or activated. All architecture proposals below require your review and approval before any build proceeds.
+  ⚠️ &nbsp; Nothing in this memo has been deployed or activated. All architecture proposals below require review and approval before any build proceeds.
 </div>
 
 <!-- BODY -->
@@ -395,7 +395,7 @@
     <div class="callout important">
       <div class="callout-icon">📋</div>
       <div class="callout-body">
-        <strong>The one thing I created that you should know about</strong>
+        <strong>The one thing I created </strong>
         <p>During the investigation, I did create one new custom field in the Executive Escalations Triage Asana project: <strong>Dispatcher Status</strong> (GID: 1218925551036138) with values New, Processing, Processed, Needs Human Review, and Failed. No automation, scheduling, or agent has been connected to it. It exists as a field only.</p>
       </div>
     </div>
@@ -457,7 +457,7 @@
   <section class="section">
     <div class="section-label">What I investigated</div>
     <h2>What I validated, and what I couldn't resolve alone</h2>
-    <p>I used Sidekick to validate the proposed rebuild architecture. Throughout the investigation I instructed Sidekick not to build or activate anything — the goal was to confirm whether the design was feasible before bringing it to you.</p>
+    <p>I used Sidekick to validate the proposed rebuild architecture. Throughout the investigation I instructed Sidekick not to build or activate anything — the goal was to confirm whether the design was feasible.</p>
 
     <div class="two-col">
       <div>
@@ -473,7 +473,7 @@
       <div>
         <div class="col-header">What I could not resolve alone</div>
         <ul class="prose">
-          <li>Sidekick found additional Asana projects beyond Executive Escalations Triage: Executive Escalations - Strategic Accounts (GID: 1211057248458958) and an older project (GID: 1201984215267707). The duplicate check must span every active-escalation source — I can't determine which projects are authoritative without your input.</li>
+          <li>Sidekick found additional Asana projects beyond Executive Escalations Triage: Executive Escalations - Strategic Accounts (GID: 1211057248458958) and an older project (GID: 1201984215267707). The duplicate check must span every active-escalation source.</li>
           <li>The process documentation says routing is based on Function + Region, but the original agent also included Segment. I don't want to build routing logic on an assumption here.</li>
           <li>Sidekick could not find an authoritative Champion roster — only historical assignment names. If one doesn't exist, we need to decide whether to create one and where to maintain it.</li>
         </ul>
@@ -486,7 +486,7 @@
   <section class="section">
     <div class="section-label">Proposed redesign — not approved, not deployed</div>
     <h2>The four key changes from the original design</h2>
-    <p>The core proposal is to address each of the six failures before rebuilding. This is what the redesign looks like — but none of this moves forward until you've reviewed it.</p>
+    <p>The core proposal is to address each of the six failures before rebuilding. This is what the redesign looks like.</p>
 
     <ul class="changes-list">
       <li>
@@ -535,9 +535,9 @@
 
   <!-- DECISIONS NEEDED -->
   <section class="section">
-    <div class="section-label">Open questions — decisions needed from you</div>
-    <h2>Six things I need your confirmation on</h2>
-    <p>Nothing below can be finalized in the design without your input. I've deliberately stopped rather than make assumptions on any of these.</p>
+    <div class="section-label">Open questions</div>
+    <h2>Six things we need confirmation on</h2>
+    <p></p>
 
     <table class="decisions-table">
       <thead>
@@ -566,7 +566,7 @@
         </tr>
         <tr>
           <td>Is ungated updateTask acceptable given that it enables unattended state changes and automatic Champion assignment?</td>
-          <td>This is a cost and risk tradeoff. Ungating updateTask allows the automation to run fully unattended — which is what we want — but it also removes the approval step that currently slows things down. This is your call.</td>
+          <td>This is a cost and risk tradeoff. Ungating updateTask allows the automation to run fully unattended — which is what we want — but it also removes the approval step that currently slows things down.</td>
           <td>Before build begins</td>
         </tr>
         <tr>
@@ -589,14 +589,14 @@
         <span class="step-badge">1</span>
         <div class="step-text">
           <strong>You review this memo</strong>
-          <span>Confirm answers to the six open questions, or flag any corrections to my investigation findings. I won't take any further action until you've had a chance to review.</span>
+          <span>Confirm answers to the six open questions, or flag any corrections to my investigation findings.</span>
         </div>
       </li>
       <li>
         <span class="step-badge">2</span>
         <div class="step-text">
           <strong>We align on the design together</strong>
-          <span>Once routing criteria, authoritative escalation projects, and the Champion roster approach are confirmed, I'll finalize the full agent configuration and bring it back to you for review before any build starts.</span>
+          <span>Once routing criteria, authoritative escalation projects, and the Champion roster approach are confirmed, we can finalize the full agent configuration and test it.</span>
         </div>
       </li>
       <li>
